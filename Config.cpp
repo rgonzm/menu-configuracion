@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <fstream>
 #include <stdlib.h>
 //#include <iostream>
@@ -45,7 +45,7 @@ printf("¿Que desea configurar?\n\n\n");
 		printf("Opcion ingresada incorrecta,intente nuevamente\n");
 		}
 
-		if(opcion_elegida[0] == 49){
+		if( opcion_elegida[0] == 49 ){
 		printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA elegido Cantidad de fases\n");
 		numero_fases=Cantidad_Fases();
 		opcion_elegida[0]=0;
