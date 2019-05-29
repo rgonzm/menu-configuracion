@@ -175,7 +175,8 @@ void Tiempos_Etapas(int numero_fases) {
     for (int i = 0; i < 3; i++) {
         for (int j = 1 + aux; j <= 5 + aux; j++) {
             if (j - aux <= fases_activas) {
-                char result = j - aux;
+                char result = (j - aux);
+                printf("%c asd", result);
                 matriz[1][j] = result;
             } else {
                 matriz[1][j] = '-';
