@@ -64,14 +64,14 @@ int main()
 
 	} while (opcion_elegida[0] == 0);
 
-	scanf("%4s", nombre);
-	ofstream archivo;
-	archivo.open("Nombre.txt");
-	archivo << nombre;
-	//open archivo;
-	//archivo.open("nombre.txt");
-	printf("El nombre que ingreso es: %s\n", nombre);
-	archivo.close();
+//	scanf("%4s", nombre);
+//	ofstream archivo;
+//	archivo.open("Nombre.txt");
+//	archivo << nombre;
+//	//open archivo;
+//	//archivo.open("nombre.txt");
+//	printf("El nombre que ingreso es: %s\n", nombre);
+//	archivo.close();
 	//cin.get(nombre);
 	return 0;
 }
