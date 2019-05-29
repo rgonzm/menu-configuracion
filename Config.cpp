@@ -1,7 +1,7 @@
 ﻿#include <stdio.h>
 #include <fstream>
 #include <stdlib.h>
-#include <ctype.h>
+#include <sstream>
 #include <string>
 #include <unistd.h>
 
@@ -175,7 +175,9 @@ void Tiempos_Etapas(int numero_fases) {
     for (int i = 0; i < 3; i++) {
         for (int j = 1 + aux; j <= 5 + aux; j++) {
             if (j - aux <= fases_activas) {
-                matriz[1][j] = (char) (j - aux);
+                std::stringstream ss;
+                ss << (j - aux);
+                matriz[1][j] = ss.str();
             } else {
                 matriz[1][j] = '-';
             }
