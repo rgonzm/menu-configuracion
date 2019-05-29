@@ -1,7 +1,7 @@
 ﻿#include <stdio.h>
 #include <fstream>
 #include <stdlib.h>
-//#include <iostream>
+#include <ctype.h>
 #include <string>
 #include <unistd.h>
 
@@ -133,11 +133,11 @@ void Tiempos_Etapas(int numero_fases) {
     char Tiempos_amarillo[30];
     char Tiempos_rr[30];
     int fases_activas = numero_fases;
-    int matriz [16][16];
+    int matriz[16][16];
 
     for (int i = 0; i < 16; i++) {
-        for (int j = 0; j < 16; j++){
-            matriz [i][j] = 0;
+        for (int j = 0; j < 16; j++) {
+            matriz[i][j] = 0;
         }
     }
 
@@ -172,12 +172,12 @@ void Tiempos_Etapas(int numero_fases) {
     matriz[14][0] = 'R';
 
     int aux = 0;
-    for (int i = 0; i < 3; i++){
-        for(int j = 1+aux; j <= 5+aux; j++){
-            if(j - aux < fases_activas){
+    for (int i = 0; i < 3; i++) {
+        for (int j = 1 + aux; j <= 5 + aux; j++) {
+            if (j - aux < fases_activas) {
                 matriz[1][j] = j - aux;
-            }else{
-                matriz[1][j] = ' - ';
+            } else {
+                matriz[1][j] = '-';
             }
         }
         aux = aux + 5;
@@ -191,9 +191,13 @@ void Tiempos_Etapas(int numero_fases) {
 
         printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
-        for(int fila = 0; fila < 15; fila++){
-            for(int columna = 0; columna < 15; columna++){
-                printf(" %c ", matriz[fila][columna]);
+        for (int fila = 0; fila < 15; fila++) {
+            for (int columna = 0; columna < 15; columna++) {
+                if (isdigit(matriz[fila][columna])) {
+                    printf(" %d ", matriz[fila][columna]);
+                } else {
+                    printf(" %c ", matriz[fila][columna]);
+                }
             }
             printf("\n\n");
         }
