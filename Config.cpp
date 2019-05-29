@@ -137,7 +137,7 @@ void Tiempos_Etapas(int numero_fases) {
 
     for (int i = 0; i < 16; i++) {
         for (int j = 0; j < 16; j++) {
-            matriz[i][j] = 0;
+            matriz[i][j] = '0';
         }
     }
 
@@ -195,7 +195,6 @@ void Tiempos_Etapas(int numero_fases) {
         for (int fila = 0; fila < 15; fila++) {
             for (int columna = 0; columna < 15; columna++) {
                 printf(" %c ", matriz[fila][columna]);
-
             }
             printf("\n\n");
         }
