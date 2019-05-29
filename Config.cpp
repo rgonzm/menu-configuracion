@@ -174,8 +174,8 @@ void Tiempos_Etapas(int numero_fases) {
     int aux = 0;
     for (int i = 0; i < 3; i++) {
         for (int j = 1 + aux; j <= 5 + aux; j++) {
-            if (j - aux < fases_activas) {
-                matriz[1][j] = j - aux;
+            if (j - aux <= fases_activas) {
+                matriz[1][j] = (char) (j - aux);
             } else {
                 matriz[1][j] = '-';
             }
@@ -193,11 +193,8 @@ void Tiempos_Etapas(int numero_fases) {
 
         for (int fila = 0; fila < 15; fila++) {
             for (int columna = 0; columna < 15; columna++) {
-                if (isdigit(matriz[fila][columna])) {
-                    printf(" %d ", matriz[fila][columna]);
-                } else {
-                    printf(" %c ", matriz[fila][columna]);
-                }
+                printf(" %c ", matriz[fila][columna]);
+
             }
             printf("\n\n");
         }
