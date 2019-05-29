@@ -175,9 +175,8 @@ void Tiempos_Etapas(int numero_fases) {
     for (int i = 0; i < 3; i++) {
         for (int j = 1 + aux; j <= 5 + aux; j++) {
             if (j - aux <= fases_activas) {
-                std::stringstream ss;
-                ss << (j - aux);
-                matriz[1][j] = ss.str();
+                char result = j - aux;
+                matriz[1][j] = result;
             } else {
                 matriz[1][j] = '-';
             }
